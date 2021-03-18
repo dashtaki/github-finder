@@ -11,7 +11,7 @@ const client = new ApolloClient({
     request: (operation) => {
         operation.setContext({
             headers: {
-                authorization: "token 4708628cd814f0b7a361be1bad00c5cf5ed1fa7e"
+                authorization: "token 4f9622ba31750020b6bd962cd74a168d5826f337"
             }
         })
     }
