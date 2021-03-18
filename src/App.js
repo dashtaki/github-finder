@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Search from './component/search/Search';
-import {TodoPrivateListQuery} from './component/Repositories/Repositories';
+import {Repositories} from './component/Repositories/Repositories';
 
 // TODO: add prettier
 // TODO: Add styled-component
@@ -21,7 +21,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route path={'/search'} exact component={Search}/>
-                    <Route path={'/repositories/:username'} component={TodoPrivateListQuery}/>
+                    <Route path={'/repositories/:username'} component={Repositories}/>
                 </Switch>
             </Router>
         </div>

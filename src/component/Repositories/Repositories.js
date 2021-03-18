@@ -25,7 +25,7 @@ const SEARCH_REPO_QUERY = gql`
     }
 `;
 
-export const TodoPrivateListQuery = ({...props}) => {
+export const Repositories = ({...props}) => {
     const {username} = props.match.params
     const [repositoriesPagination, setRepositoriesPagination] = useState(null);
 
