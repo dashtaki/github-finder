@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
-import Search from './component/Search/Search';
+import Search from './component/SearchUser/SearchUser';
 import Repositories from './component/Repositories/Repositories';
 
 // TODO: add prettier

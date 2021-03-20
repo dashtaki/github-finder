@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import {SEARCH_USER_QUERY} from '../../graphql/queries/searchUser';
 import ApiError from '../shared/ApiError'
 
-const Search = ({className}) => {
+const SearchUser = ({className}) => {
     // TODO; keep searched user in redux
     const [searchedUser, setSearchedUser] = useState('');
     const [selectedUser, setSelectedUser] = useState({});
@@ -46,7 +46,7 @@ const Search = ({className}) => {
     </form>
 }
 
-export default styled(Search)`
+export default styled(SearchUser)`
   display: flex;
   flex-direction: column;
   justify-content: center;
