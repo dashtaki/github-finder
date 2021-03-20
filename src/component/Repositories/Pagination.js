@@ -6,7 +6,9 @@ import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 const Pagination = ({className, ...props}) => {
     const {pageInfo, handleOnNext, handleOnPrevious} = props;
 
-    return <div className={className}>
+    const onePage = (!pageInfo.hasNextPage && !pageInfo.hasPreviousPage) ? `${className} one-page` : className;
+
+    return <div className={onePage}>
         <button disabled={!pageInfo.hasPreviousPage} onClick={handleOnPrevious}>
             <FontAwesomeIcon icon={faChevronLeft}/>
         </button>
@@ -16,5 +18,36 @@ const Pagination = ({className, ...props}) => {
 }
 
 export default styled(Pagination)`
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.one-page {
+    display: none;
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:enabled .svg-inline--fa {
+    color: #1301ff
+  }
+
+  button:enabled:hover {
+    background-color: whitesmoke;
+  }
 `;

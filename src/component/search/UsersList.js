@@ -28,7 +28,7 @@ const UsersList = ({className, ...props}) => {
 export default styled(UsersList)`
   padding: 0;
   z-index: 1;
-  margin-top: 5%;
+  margin-top: 3%;
 
   li {
     display: flex;

@@ -67,4 +67,5 @@ export default styled(Repositories)`
   width: 50%;
   margin-left: 25%;
   margin-top: 4rem;
+  padding-bottom: 3rem;
 `;

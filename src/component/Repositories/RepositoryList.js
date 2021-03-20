@@ -50,17 +50,24 @@ export default styled(RepositoryList)`
   }
 
   .repo__detail {
-    width: 10%;
+    width: 15%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-weight: 600;
+    font-weight: 200;
   }
 
   .repo__detail:first-child {
     display: flex;
-    width: 70%;
+    width: 60%;
     justify-content: flex-start;
+  }
+
+  .repo__detail:last-child {
+    width: 10%;
+    .svg-inline--fa {
+      color: blue;
+    }
   }
 
   .repo__name {

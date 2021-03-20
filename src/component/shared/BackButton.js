@@ -18,4 +18,9 @@ export default styled(BackButton)`
   background-color: transparent;
   border: 0;
   color: blue;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 `;

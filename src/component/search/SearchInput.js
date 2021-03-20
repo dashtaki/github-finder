@@ -6,7 +6,7 @@ const SearchInput = ({className, ...props}) => {
     const {name, handleOnChange} = props;
 
     return <div className={className}>
-        <input type="text" name="username" id="search-input" placeholder="Search" value={name}
+        <input type="text" name="username" id="search-input" placeholder="Search User..." value={name}
                onChange={handleOnChange}/>
         <section id="search-background"></section>
         <button type="submit" value="Find" disabled={!name}>
@@ -25,7 +25,7 @@ export default styled(SearchInput)`
     height: 2.5rem;
     border-radius: 3rem;
     border: 1px solid lightgray;
-    width: 10rem;
+    width: 18rem;
     font-size: 1rem;
     transform: translateX(-50%);
   }
@@ -56,17 +56,22 @@ export default styled(SearchInput)`
     z-index: 2;
     position: absolute;
     top: 5%;
-    left: 57%;
+    left: calc(50% + 8rem); 
     background-color: transparent;
     border: 0;
     margin-top: .6rem;
     margin-right: 6rem;
     width: 30px;
     font-size: 1.2rem;
+    cursor: pointer;
   }
 
   button[type=submit]:enabled {
     color: blue;
+  }
+
+  button[type=submit]:focus {
+    outline: none;
   }
 
   #search-background {
