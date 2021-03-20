@@ -25,44 +25,6 @@ const SEARCH_USER_QUERY = gql`
     }
 `;
 
-// const SEARCH_REPO_QUERY = gql`
-//     query userRepos($username: String!) {
-//       user(login: $username) {
-//         repositories(first: 100, isFork: false) {
-//           nodes {
-//             name
-//             url
-//             forkCount
-//             stargazerCount
-//           }
-//           pageInfo {
-//             endCursor
-//             hasNextPage
-//             hasPreviousPage
-//           }
-//         }
-//       }
-//     }
-// `;
-
-// const SEARCH_REPO_QUERY = gql`
-//    query userRepos($username: String!) {
-//       search(query: $username, type: REPOSITORY) {
-//         repositoryCount
-//         edges {
-//           node {
-//             ... on Repository {
-//               name
-//               url
-//               stargazerCount
-//               forkCount
-//             }
-//           }
-//         }
-//       }
-//     }
-// `;
-
 const Search = () => {
     // TODO; keep searched user in redux
     // TODO: pass input value directly to the query and remove it

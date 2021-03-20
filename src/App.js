@@ -11,7 +11,9 @@ import {Repositories} from './component/Repositories/Repositories';
 // TODO: add SASS
 // TODO: pagination
 // TODO: Spinner
-// TODO: README: SASS, Prettier, BEM, GraphQl, SOLID, Branching, pre-commit, styled-component, Pagination, Redux
+// TODO: Typescript
+// TODO: directory structure of graphql
+// TODO: README: SASS, Prettier, BEM, GraphQl, SOLID, Branching, pre-commit, styled-component, Pagination, Redux-Jotai
 //               , Optional points, Spinner
 
 
