@@ -5,6 +5,7 @@ import SearchInput from './SearchInput';
 import UsersList from './UsersList';
 import styled from 'styled-components';
 import {SEARCH_USER_QUERY} from '../../graphql/queries/searchUser';
+import ApiError from '../shared/ApiError'
 
 const Search = ({className}) => {
     // TODO; keep searched user in redux
@@ -12,7 +13,7 @@ const Search = ({className}) => {
     const [selectedUser, setSelectedUser] = useState({});
     const history = useHistory()
 
-    const [searchUsersByGithubId, {data, loading}] = useLazyQuery(SEARCH_USER_QUERY, {
+    const [searchUsersByGithubId, {data, loading, error}] = useLazyQuery(SEARCH_USER_QUERY, {
         variables: {
             userQuery: searchedUser
         }
@@ -38,7 +39,10 @@ const Search = ({className}) => {
 
     return <form onSubmit={formSubmit} className={className}>
         <SearchInput name={selectedUser.name} handleOnChange={onSearchUser}/>
-        <UsersList users={data} handleOnUserClick={onUserClick} loading={loading} searchTerm={searchedUser}/>
+        {
+            error
+                ? <ApiError error={error}/>
+                : <UsersList users={data} handleOnUserClick={onUserClick} loading={loading} searchTerm={searchedUser}/>}
     </form>
 }
 
