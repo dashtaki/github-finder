@@ -1,22 +1,12 @@
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Search from './component/search/Search';
 import Repositories from './component/Repositories/Repositories';
 
 // TODO: add prettier
-// TODO: Add styled-component
-// TODO: redirect / to search
-// TODO: lint-staged
-// TODO: remove axios
-// TODO: remove extra packages
-// TODO: font-awesome
 // TODO: add SASS
-// TODO: pagination
-// TODO: Spinner
 // TODO: Typescript
-// TODO: directory structure of graphql
 // TODO: README: SASS, Prettier, BEM, GraphQl, SOLID, Branching, pre-commit, styled-component, Pagination, Redux-Jotai
-// , Optional points, Spinner
-// TODO: remove my token and add it to README
+// , Optional points, Spinner, remove my token and add it to README, Cypress
 
 
 function App() {
@@ -26,6 +16,9 @@ function App() {
                 <Switch>
                     <Route path={'/search'} exact component={Search}/>
                     <Route path={'/repositories/:username'} component={Repositories}/>
+                    <Route exact path="/">
+                        <Redirect to="/search" />
+                    </Route>
                 </Switch>
             </Router>
         </div>
