@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from '@apollo/react-hooks';
 
-const TOKEN = "cfed2c9ca15b03a734bdba5d3f5860a157b05faa";
+const TOKEN = "b00866204a27921dca7cc09b05150a7ea18ef41e";
 
 const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',

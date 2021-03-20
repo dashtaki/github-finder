@@ -1,27 +1,6 @@
 import {useState, useEffect} from 'react';
 import {useLazyQuery} from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-
-const SEARCH_REPO_QUERY = gql`
-    query userRepos($username: String!, $after: String, $before: String, $first: Int, $last: Int) {
-      user(login: $username) {
-        repositories(first: $first, after: $after, before: $before, isFork: false, last: $last) {
-          nodes {
-            name
-            url
-            forkCount
-            stargazerCount
-          }
-          pageInfo {
-            endCursor
-            startCursor
-            hasNextPage
-            hasPreviousPage
-          }
-        }
-      }
-    }
-`;
+import {SEARCH_REPO_QUERY} from '../../graphql/queries/searchRepositoryByGithubId';
 
 export const Repositories = ({...props}) => {
     const {username} = props.match.params
@@ -69,9 +48,7 @@ export const Repositories = ({...props}) => {
         setVariables(nextPageVariables);
     }
 
-    const userHasNoRepositories = () => {
-        return !data.user || !data.user.repositories.nodes.length
-    }
+    const userHasNoRepositories = () => !data.user || !data.user.repositories.nodes.length
 
     return (
         <>

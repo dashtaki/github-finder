@@ -14,7 +14,8 @@ import {Repositories} from './component/Repositories/Repositories';
 // TODO: Typescript
 // TODO: directory structure of graphql
 // TODO: README: SASS, Prettier, BEM, GraphQl, SOLID, Branching, pre-commit, styled-component, Pagination, Redux-Jotai
-//               , Optional points, Spinner
+// , Optional points, Spinner
+// TODO: remove my token and add it to README
 
 
 function App() {
