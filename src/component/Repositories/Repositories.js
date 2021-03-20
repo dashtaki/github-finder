@@ -1,79 +1,70 @@
 import {useState, useEffect} from 'react';
 import {useLazyQuery} from '@apollo/react-hooks';
 import {SEARCH_REPO_QUERY} from '../../graphql/queries/searchRepositoryByGithubId';
+import BackButton from '../shared/BackButton';
+import Spinner from '../shared/Spinner';
+import Pagination from './Pagination';
+import NoRepository from './NoRepository';
+import styled from 'styled-components';
+import RepositoryList from "./RepositoryList";
 
-export const Repositories = ({...props}) => {
-    const {username} = props.match.params
-    const {history} = props;
-    const [endCursor, setEndCursor] = useState(null);
-    const [startCursor, setStartCursor] = useState(null);
-    const [variables, setVariables] = useState({username, first: 20});
+const Repositories = ({className, ...props}) => {
+        const {username} = props.match.params
+        const [endCursor, setEndCursor] = useState(null);
+        const [startCursor, setStartCursor] = useState(null);
+        const [variables, setVariables] = useState({username, first: 20});
 
-    const setCursors = (queryResult) => {
-        if (!queryResult) return;
+        const setCursors = (queryResult) => {
+            if (!queryResult) return;
 
-        setEndCursor(queryResult.user.repositories.pageInfo.endCursor)
-        setStartCursor(queryResult.user.repositories.pageInfo.startCursor)
+            const {startCursor, endCursor} = queryResult.user.repositories.pageInfo;
+            setEndCursor(endCursor);
+            setStartCursor(startCursor);
+        }
+
+        const [getUserRepositories, {loading, error, data}] = useLazyQuery(SEARCH_REPO_QUERY, {
+            onCompleted: result => setCursors(result),
+            fetchPolicy: 'network-only',
+            variables: variables
+        })
+
+        useEffect(() => getUserRepositories(), [])
+
+        if (loading || !data) return <Spinner/>
+
+        if (error) return [<BackButton/>, <div>Error!</div>]
+
+        const onNext = () => {
+            const nextPageVariables = {username, first: 20, after: endCursor}
+            setVariables(nextPageVariables);
+        }
+
+        const onPrevious = () => {
+            const nextPageVariables = {username, last: 20, before: startCursor}
+            setVariables(nextPageVariables);
+        }
+
+        const userHasNoRepository = !data.user || !data.user.repositories.nodes.length
+
+        return (
+            <section className={className}>
+                <BackButton/>
+                {userHasNoRepository
+                    ? <NoRepository/>
+                    : <>
+                        <RepositoryList repositories={data.user.repositories.nodes} />
+                        <Pagination pageInfo={data.user.repositories.pageInfo}
+                                    handleOnPrevious={onPrevious}
+                                    onNext={onNext}/>
+                    </>
+                }
+            </section>
+        )
     }
+;
 
-    const [getUserRepositories, {loading, error, data}] = useLazyQuery(SEARCH_REPO_QUERY, {
-        onCompleted: result => setCursors(result),
-        fetchPolicy: 'network-only',
-        variables: variables
-    })
-
-    useEffect(() => getUserRepositories(), [])
-
-    const backToSearch = () => {
-        /**
-         * Use 'push' instead of goBack() to work properly
-         * even when you open a specific station in address bar directly
-         */
-        history.push('/search')
-    }
-
-    const backButton = () => <button onClick={backToSearch}>Back to search</button>
-
-    if (loading || !data) return <div>Loading...</div>
-
-    if (error) return [backButton(), <div>Error!</div>]
-
-    const onNext = () => {
-        const nextPageVariables = {username, first: 20, after: endCursor}
-        setVariables(nextPageVariables);
-    }
-
-    const onPrevious = () => {
-        const nextPageVariables = {username, last: 20, before: startCursor}
-        setVariables(nextPageVariables);
-    }
-
-    const userHasNoRepositories = () => !data.user || !data.user.repositories.nodes.length
-
-    return (
-        <>
-            {userHasNoRepositories() ? <h3>User does not have any repository!</h3> :
-                <>
-                    {backButton()}
-                    <ul>
-                        {
-                            data.user.repositories.nodes.map((node, index) => (
-                                <li key={index}>
-                                    Forks: {node.forkCount}
-                                    Name: {node.name}
-                                    Starts: {node.stargazerCount}
-                                    <a href={node.url} target='_blank'>Link</a>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                    <div>
-                        <button disabled={!data.user.repositories.pageInfo.hasPreviousPage} onClick={onPrevious}> Prev
-                        </button>
-                        <button disabled={!data.user.repositories.pageInfo.hasNextPage} onClick={onNext}> Next</button>
-                    </div>
-                </>
-            }
-        </>
-    )
-};
+export default styled(Repositories)`
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 4rem;
+`;

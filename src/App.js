@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Search from './component/search/Search';
-import {Repositories} from './component/Repositories/Repositories';
+import Repositories from './component/Repositories/Repositories';
 
 // TODO: add prettier
 // TODO: Add styled-component
@@ -8,6 +8,7 @@ import {Repositories} from './component/Repositories/Repositories';
 // TODO: lint-staged
 // TODO: remove axios
 // TODO: remove extra packages
+// TODO: font-awesome
 // TODO: add SASS
 // TODO: pagination
 // TODO: Spinner
