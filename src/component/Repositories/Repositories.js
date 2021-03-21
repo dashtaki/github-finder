@@ -9,10 +9,11 @@ import styled from 'styled-components';
 import RepositoryList from "./RepositoryList";
 
 const Repositories = ({className, ...props}) => {
+        const PAGE_LIMIT = 10;
         const {username} = props.match.params
         const [endCursor, setEndCursor] = useState(null);
         const [startCursor, setStartCursor] = useState(null);
-        const [variables, setVariables] = useState({username, first: 20});
+        const [variables, setVariables] = useState({username, first: PAGE_LIMIT});
 
         const setCursors = (queryResult) => {
             if (!queryResult) return;
@@ -35,12 +36,12 @@ const Repositories = ({className, ...props}) => {
         if (error) return [<BackButton/>, <div>Error!</div>]
 
         const onNext = () => {
-            const nextPageVariables = {username, first: 20, after: endCursor}
+            const nextPageVariables = {username, first: PAGE_LIMIT, after: endCursor}
             setVariables(nextPageVariables);
         }
 
         const onPrevious = () => {
-            const nextPageVariables = {username, last: 20, before: startCursor}
+            const nextPageVariables = {username, last: PAGE_LIMIT, before: startCursor}
             setVariables(nextPageVariables);
         }
 
