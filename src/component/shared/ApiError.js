@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 const ApiError = ({className, ...props}) => {
     const {error} = props;
-    console.log(error)
 
-    return <h3 className={className}>
+    return <h3 className={className + ' api-error__wrapper'}>
         <FontAwesomeIcon icon={faDumpsterFire}/>
         <span>{error.message}</span>
     </h3>

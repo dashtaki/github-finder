@@ -1,0 +1,9 @@
+{
+  "data": {
+    "search": {
+      "edges": [],
+      "userCount": 0,
+      "__typename": "SearchResultItemConnection"
+    }
+  }
+}

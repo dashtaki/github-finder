@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Spinner = ({className}) => {
     return <>
-        <div className={className}>
+        <div className={className + ' spinner'}>
             <div className="cssload-cube cssload-c1"></div>
             <div className="cssload-cube cssload-c2"></div>
             <div className="cssload-cube cssload-c4"></div>

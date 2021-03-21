@@ -1,0 +1,162 @@
+{
+  "data": {
+    "search": {
+      "edges": [
+        {
+          "node": {
+            "id": "MDQ6VXNlcjIwNTYxMTE=",
+            "login": "sad",
+            "email": "",
+            "name": "reid",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/2056111?s=40&u=85a705baf83e6d0eeccb32c8b904642568a8d663&v=4",
+            "followers": {
+              "totalCount": 63,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 14,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjE5NDkyNTkx",
+            "login": "sadikturan",
+            "email": "sadikturan@gmail.com",
+            "name": "",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/19492591?s=40&u=7e9db9c5d8b03806fc9e8ba328be029690b4ae11&v=4",
+            "followers": {
+              "totalCount": 1992,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 0,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjEyNjc4NjU=",
+            "login": "sadhen",
+            "email": "",
+            "name": "Darcy Shen",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1267865?s=40&u=a401aaadab50dc63f00943423383a3c758b9ef8a&v=4",
+            "followers": {
+              "totalCount": 227,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 211,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjE3NzUyNQ==",
+            "login": "sadjow",
+            "email": "sadjow@gmail.com",
+            "name": "Sadjow Leão",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/177525?s=40&u=082d9e6db5d33c2d06dbd6be9d1414dbca49b17f&v=4",
+            "followers": {
+              "totalCount": 298,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 123,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjUxMDMwOTY=",
+            "login": "sadlil",
+            "email": "sadlil.rhythm@gmail.com",
+            "name": "Sadlil Rhythom",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/5103096?s=40&u=e9262e84cc8a5767f01f1c4d675b75f7ed2b7937&v=4",
+            "followers": {
+              "totalCount": 310,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 319,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjkzODY2MjQ=",
+            "login": "SadeghHayeri",
+            "email": "hayerisadegh@gmail.com",
+            "name": "Sadegh Hayeri",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/9386624?s=40&u=960890360014b3a1937f2b276ff7776d4e106d47&v=4",
+            "followers": {
+              "totalCount": 254,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 179,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjc0Mzc3MA==",
+            "login": "frutik",
+            "email": "",
+            "name": "Andrew Kornilov",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/743770?s=40&u=36c99e65687ae38cd9abaa4cdfffd8c5da76c175&v=4",
+            "followers": {
+              "totalCount": 33,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 19,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        },
+        {
+          "node": {
+            "id": "MDQ6VXNlcjQxNzAxNg==",
+            "login": "sadasant",
+            "email": "",
+            "name": "Daniel Rodríguez",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/417016?s=40&u=76a7d7b298e02b434d29604ca2ea1d72a667d593&v=4",
+            "followers": {
+              "totalCount": 156,
+              "__typename": "FollowerConnection"
+            },
+            "following": {
+              "totalCount": 140,
+              "__typename": "FollowingConnection"
+            },
+            "__typename": "User"
+          },
+          "__typename": "SearchResultItemEdge"
+        }
+      ],
+      "userCount": 32420,
+      "__typename": "SearchResultItemConnection"
+    }
+  }
+}
