@@ -1,4 +1,7 @@
-import {SET_SELECTED_USER, SET_USER_SEARCH_RESULT} from '../actions/actionTypes';
+import {
+    SET_SELECTED_USER,
+    SET_USER_SEARCH_RESULT,
+} from '../actions/actionTypes';
 
 export const userReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -6,12 +9,12 @@ export const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 selectedUser: action.selectedUser,
-            }
+            };
         case SET_USER_SEARCH_RESULT:
             return {
                 ...state,
-                searchResult: action.searchResult
-            }
+                searchResult: action.searchResult,
+            };
         default:
             return state;
     }
@@ -19,5 +22,5 @@ export const userReducer = (state = initialState, action) => {
 
 const initialState = {
     selectedUser: null,
-    searchResult: null
-}
+    searchResult: null,
+};

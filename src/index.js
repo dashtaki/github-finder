@@ -4,29 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ApolloClient from 'apollo-boost';
-import {ApolloProvider} from '@apollo/react-hooks';
-import {store} from './store/store';
-import {Provider} from "react-redux";
+import { ApolloProvider } from '@apollo/react-hooks';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
 
-const TOKEN = "a98426aa7684d86520c310ced948f931a9f389bd";
+const TOKEN = '218add489876a686f930dd13ada044bf63bd06ba';
 
 const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',
     request: (operation) => {
         operation.setContext({
             headers: {
-                authorization: "token " + TOKEN
-            }
-        })
-    }
+                authorization: 'token ' + TOKEN,
+            },
+        });
+    },
 });
 
-const rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
         <ApolloProvider client={client}>
             <React.StrictMode>
-                <App/>
+                <App />
             </React.StrictMode>
         </ApolloProvider>
     </Provider>,

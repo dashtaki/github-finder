@@ -1,0 +1,17 @@
+{
+  "semi": true,
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "singleQuote": true
+      }
+    },
+    {
+      "files": ["*.html", "*.js"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}
