@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ApolloClient from 'apollo-boost';
 import {ApolloProvider} from '@apollo/react-hooks';
+import {store} from './store/store';
+import {Provider} from "react-redux";
 
 const TOKEN = "a98426aa7684d86520c310ced948f931a9f389bd";
 
@@ -21,11 +23,13 @@ const client = new ApolloClient({
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(
-    <ApolloProvider client={client}>
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>
-    </ApolloProvider>,
+    <Provider store={store}>
+        <ApolloProvider client={client}>
+            <React.StrictMode>
+                <App/>
+            </React.StrictMode>
+        </ApolloProvider>
+    </Provider>,
     rootElement
 );
 
