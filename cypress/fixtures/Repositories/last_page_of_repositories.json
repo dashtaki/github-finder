@@ -1,0 +1,54 @@
+{
+  "data": {
+    "user": {
+      "repositories": {
+        "nodes": [
+          {
+            "name": "gistviewer",
+            "url": "https://github.com/samuelcolvin/gistviewer",
+            "forkCount": 0,
+            "stargazerCount": 3,
+            "__typename": "Repository"
+          },
+          {
+            "name": "cfpypi",
+            "url": "https://github.com/samuelcolvin/cfpypi",
+            "forkCount": 0,
+            "stargazerCount": 5,
+            "__typename": "Repository"
+          },
+          {
+            "name": "pytest-cloudflare-worker",
+            "url": "https://github.com/samuelcolvin/pytest-cloudflare-worker",
+            "forkCount": 0,
+            "stargazerCount": 3,
+            "__typename": "Repository"
+          },
+          {
+            "name": "pydantic-sandbox",
+            "url": "https://github.com/samuelcolvin/pydantic-sandbox",
+            "forkCount": 0,
+            "stargazerCount": 3,
+            "__typename": "Repository"
+          },
+          {
+            "name": "smokeshow",
+            "url": "https://github.com/samuelcolvin/smokeshow",
+            "forkCount": 0,
+            "stargazerCount": 3,
+            "__typename": "Repository"
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Y3Vyc29yOnYyOpHOFIiWog==",
+          "startCursor": "Y3Vyc29yOnYyOpHOETHDcQ==",
+          "hasNextPage": false,
+          "hasPreviousPage": true,
+          "__typename": "PageInfo"
+        },
+        "__typename": "RepositoryConnection"
+      },
+      "__typename": "User"
+    }
+  }
+}

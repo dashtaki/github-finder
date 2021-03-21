@@ -1,0 +1,89 @@
+{
+  "data": {
+    "user": {
+      "repositories": {
+        "nodes": [
+          {
+            "name": "jsdom",
+            "url": "https://github.com/jsdom/jsdom",
+            "forkCount": 1365,
+            "stargazerCount": 15543,
+            "__typename": "Repository"
+          },
+          {
+            "name": "q",
+            "url": "https://github.com/kriskowal/q",
+            "forkCount": 1240,
+            "stargazerCount": 14931,
+            "__typename": "Repository"
+          },
+          {
+            "name": "node-canvas",
+            "url": "https://github.com/Automattic/node-canvas",
+            "forkCount": 917,
+            "stargazerCount": 7550,
+            "__typename": "Repository"
+          },
+          {
+            "name": "CSSOM",
+            "url": "https://github.com/NV/CSSOM",
+            "forkCount": 86,
+            "stargazerCount": 691,
+            "__typename": "Repository"
+          },
+          {
+            "name": "q-connection",
+            "url": "https://github.com/kriskowal/q-connection",
+            "forkCount": 41,
+            "stargazerCount": 239,
+            "__typename": "Repository"
+          },
+          {
+            "name": "developers.whatwg.org",
+            "url": "https://github.com/benschwarz/developers.whatwg.org",
+            "forkCount": 40,
+            "stargazerCount": 202,
+            "__typename": "Repository"
+          },
+          {
+            "name": "node-sandboxed-module",
+            "url": "https://github.com/felixge/node-sandboxed-module",
+            "forkCount": 46,
+            "stargazerCount": 337,
+            "__typename": "Repository"
+          },
+          {
+            "name": "extensions",
+            "url": "https://github.com/domenic/extensions",
+            "forkCount": 0,
+            "stargazerCount": 6,
+            "__typename": "Repository"
+          },
+          {
+            "name": "setImmediate",
+            "url": "https://github.com/YuzuJS/setImmediate",
+            "forkCount": 118,
+            "stargazerCount": 1185,
+            "__typename": "Repository"
+          },
+          {
+            "name": "contextify",
+            "url": "https://github.com/brianmcd/contextify",
+            "forkCount": 62,
+            "stargazerCount": 280,
+            "__typename": "Repository"
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Y3Vyc29yOnYyOpHOACB_Sw==",
+          "startCursor": "Y3Vyc29yOnYyOpHOAAdNeA==",
+          "hasNextPage": true,
+          "hasPreviousPage": false,
+          "__typename": "PageInfo"
+        },
+        "__typename": "RepositoryConnection"
+      },
+      "__typename": "User"
+    }
+  }
+}

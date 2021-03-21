@@ -8,7 +8,7 @@ const BackButton = ({className}) => {
 
     const backToSearch = () => history.push('/search')
 
-    return <button onClick={backToSearch} className={className}>
+    return <button onClick={backToSearch} className={className + ' back-button'}>
         <FontAwesomeIcon icon={faArrowCircleLeft}/>
     </button>
 }

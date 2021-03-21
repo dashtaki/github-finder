@@ -1,0 +1,61 @@
+{
+  "data": {
+    "user": {
+      "repositories": {
+        "nodes": [
+          {
+            "name": "IsResponisve",
+            "url": "https://github.com/dashtaki/IsResponisve",
+            "forkCount": 20,
+            "stargazerCount": 10,
+            "__typename": "Repository"
+          },
+          {
+            "name": "fake-backend",
+            "url": "https://github.com/dashtaki/fake-backend",
+            "forkCount": 0,
+            "stargazerCount": 0,
+            "__typename": "Repository"
+          },
+          {
+            "name": "dartboard",
+            "url": "https://github.com/dashtaki/dartboard",
+            "forkCount": 0,
+            "stargazerCount": 0,
+            "__typename": "Repository"
+          },
+          {
+            "name": "square",
+            "url": "https://github.com/dashtaki/square",
+            "forkCount": 0,
+            "stargazerCount": 0,
+            "__typename": "Repository"
+          },
+          {
+            "name": "virta-charging-stations",
+            "url": "https://github.com/dashtaki/virta-charging-stations",
+            "forkCount": 0,
+            "stargazerCount": 0,
+            "__typename": "Repository"
+          },
+          {
+            "name": "github-finder",
+            "url": "https://github.com/dashtaki/github-finder",
+            "forkCount": 0,
+            "stargazerCount": 0,
+            "__typename": "Repository"
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Y3Vyc29yOnYyOpHOFLq-yg==",
+          "startCursor": "Y3Vyc29yOnYyOpHOCEy7mg==",
+          "hasNextPage": false,
+          "hasPreviousPage": false,
+          "__typename": "PageInfo"
+        },
+        "__typename": "RepositoryConnection"
+      },
+      "__typename": "User"
+    }
+  }
+}

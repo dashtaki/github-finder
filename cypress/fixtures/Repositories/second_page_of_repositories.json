@@ -1,0 +1,89 @@
+{
+  "data": {
+    "user": {
+      "repositories": {
+        "nodes": [
+          {
+            "name": "dict",
+            "url": "https://github.com/domenic/dict",
+            "forkCount": 7,
+            "stargazerCount": 77,
+            "__typename": "Repository"
+          },
+          {
+            "name": "pubit",
+            "url": "https://github.com/domenic/pubit",
+            "forkCount": 9,
+            "stargazerCount": 28,
+            "__typename": "Repository"
+          },
+          {
+            "name": "sinon-chai",
+            "url": "https://github.com/domenic/sinon-chai",
+            "forkCount": 104,
+            "stargazerCount": 1049,
+            "__typename": "Repository"
+          },
+          {
+            "name": "chai-as-promised",
+            "url": "https://github.com/domenic/chai-as-promised",
+            "forkCount": 110,
+            "stargazerCount": 1376,
+            "__typename": "Repository"
+          },
+          {
+            "name": "dynamo-as-promised",
+            "url": "https://github.com/domenic/dynamo-as-promised",
+            "forkCount": 2,
+            "stargazerCount": 11,
+            "__typename": "Repository"
+          },
+          {
+            "name": "mocha-as-promised",
+            "url": "https://github.com/domenic/mocha-as-promised",
+            "forkCount": 18,
+            "stargazerCount": 134,
+            "__typename": "Repository"
+          },
+          {
+            "name": "cs4h",
+            "url": "https://github.com/domenic/cs4h",
+            "forkCount": 1,
+            "stargazerCount": 5,
+            "__typename": "Repository"
+          },
+          {
+            "name": "jadeify",
+            "url": "https://github.com/domenic/jadeify",
+            "forkCount": 28,
+            "stargazerCount": 163,
+            "__typename": "Repository"
+          },
+          {
+            "name": "opener",
+            "url": "https://github.com/domenic/opener",
+            "forkCount": 25,
+            "stargazerCount": 271,
+            "__typename": "Repository"
+          },
+          {
+            "name": "understanding-node",
+            "url": "https://github.com/domenic/understanding-node",
+            "forkCount": 2,
+            "stargazerCount": 68,
+            "__typename": "Repository"
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Y3Vyc29yOnYyOpHOAFJwkQ==",
+          "startCursor": "Y3Vyc29yOnYyOpHOADHAhA==",
+          "hasNextPage": true,
+          "hasPreviousPage": true,
+          "__typename": "PageInfo"
+        },
+        "__typename": "RepositoryConnection"
+      },
+      "__typename": "User"
+    }
+  }
+}
