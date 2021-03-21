@@ -7,9 +7,6 @@ import {
 import Search from './component/SearchUser/SearchUser';
 import Repositories from './component/Repositories/Repositories';
 
-// TODO: README: SASS, Prettier, BEM, GraphQl, SOLID, Branching, pre-commit, styled-component, Pagination, Redux-Jotai
-// , Optional points, Spinner, remove my token and add it to README, Cypress, typescript, sass
-
 function App() {
     return (
         <div className="App">

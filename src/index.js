@@ -8,7 +8,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { store } from './store/store';
 import { Provider } from 'react-redux';
 
-const TOKEN = '218add489876a686f930dd13ada044bf63bd06ba';
+const TOKEN = 'put-your-generated-token-here';
 
 const client = new ApolloClient({
     uri: 'https://api.github.com/graphql',
