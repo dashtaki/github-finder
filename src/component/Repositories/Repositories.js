@@ -55,7 +55,7 @@ const Repositories = ({className, ...props}) => {
                         <RepositoryList repositories={data.user.repositories.nodes} />
                         <Pagination pageInfo={data.user.repositories.pageInfo}
                                     handleOnPrevious={onPrevious}
-                                    onNext={onNext}/>
+                                    handleOnNext={onNext}/>
                     </>
                 }
             </section>
