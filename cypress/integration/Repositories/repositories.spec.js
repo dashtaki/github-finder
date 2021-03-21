@@ -76,16 +76,8 @@ describe('Repositories', () => {
 
     it('should show link to the repository', () => {
         cy.get('ul li')
-            .get('.repo__detail a')
+            .get('a')
             .should('have.attr', 'href', 'https://github.com/dashtaki/IsResponisve');
-    });
-
-    it('should show link icon for the repository link', () => {
-        cy.get('ul li')
-            .get('.repo__detail')
-            .eq(3)
-            .get('a .svg-inline--fa')
-            .should('have.class', 'fa-external-link-square-alt')
     });
 
     it('should not show paginator when repositories count is less that 10', () => {
