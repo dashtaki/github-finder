@@ -26,7 +26,10 @@ const SearchUser = ({className, ...props}) => {
     });
 
     const checkStateForUserSearchHistory = () => {
-        if (props.selectedUser) setSelectedUser(props.selectedUser);
+        if (props.selectedUser) {
+            setSelectedUser(props.selectedUser);
+            setSearchedUser(props.selectedUser.name);
+        }
         if (props.searchResult) setSearchResult(props.searchResult);
     }
 
@@ -45,6 +48,7 @@ const SearchUser = ({className, ...props}) => {
 
     const onUserClick = (user) => {
         setSelectedUser(user);
+        setSearchedUser(user.name);
         props.setSelectedUser(user)
     };
 
@@ -54,7 +58,7 @@ const SearchUser = ({className, ...props}) => {
     }
 
     return <form onSubmit={formSubmit} className={className}>
-        <SearchInput name={selectedUser.name} handleOnChange={onSearchUser}/>
+        <SearchInput name={searchedUser} handleOnChange={onSearchUser}/>
         {
             error
                 ? <ApiError error={error}/>
