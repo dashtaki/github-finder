@@ -22,7 +22,8 @@ npm i
 ```
 ### Github Token for Authorization
 Before you start the application you have to generate a token to fetching data from Github API.
-1. First of all, you should create a Github Token from [Here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). 
+1. First of all, you should create a Github Token from [Here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). \
+   _NOTE: Just keep in mind in 7th step check `repo` and `user`._ 
 2. Just pass the generated token in `src/index.js`, then put it in line 12, It would be like: 
    `const TOKEN = 'generatedToken'`
 
